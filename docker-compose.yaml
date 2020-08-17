@@ -4,11 +4,11 @@ services:
   lotgd-web:
      image: kizaing/lotgd-web
      ports:
-       - "8007:80"
+       - "4040:80"
      environment:
        - TZ=America/Toronto
      volumes:
-       - /media/Cerberus/Backup/Docker/LotGD/lotgd-web/site:/var/www/lotgd
+       - ./lotgd:/var/www/lotgd
      depends_on:
        - lotgd-php
        - lotgd-db
@@ -20,7 +20,7 @@ services:
      environment:
        - TZ=America/Toronto
      volumes:
-       - /media/Cerberus/Backup/Docker/LotGD/lotgd-web/site:/var/www/lotgd
+       - ./lotgd:/var/www/lotgd
   lotgd-db:
      image: kizaing/lotgd-db
      environment:
