@@ -1,0 +1,27 @@
+version: "3"
+services:
+
+  lotgd-web:
+     image: kizaing/lotgd-web
+     ports:
+       - "8007:80"
+     environment:
+       - TZ=America/Toronto
+     volumes:
+       - /media/Cerberus/Backup/Docker/LotGD/lotgd-web/site:/var/www/lotgd
+     depends_on:
+       - lotgd-php
+       - lotgd-db
+     links:
+       - lotgd-php
+       - lotgd-db
+  lotgd-php:
+     image: kizaing/lotgd-php
+     environment:
+       - TZ=America/Toronto
+     volumes:
+       - /media/Cerberus/Backup/Docker/LotGD/lotgd-web/site:/var/www/lotgd
+  lotgd-db:
+     image: kizaing/lotgd-db
+     environment:
+       - MYSQL_ROOT_PASSWORD=lotgd
