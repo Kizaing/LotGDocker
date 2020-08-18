@@ -1,7 +1,7 @@
 #This image takes the previously created PHP image and modifies it for fastcgi upstream use by the web container
 FROM lotgd-php:cli
 
-MAINTAINER Chris P
+MAINTAINER Douche
 
 # Install dotdeb repo, PHP, composer and selected extensions
 RUN apt-get update \
