@@ -1,4 +1,4 @@
-## LotgDocker
+## LotGDocker
 
 Legend of the Green Dragon by Eric 'MightyE' Stevens and JT Traub was/is an open source web based MMORPG based on the old BBS Backdoor game Legend of the Red Dragon.
 Unfortunately, development has ceased so the code base is either difficult or unsafe to run on modern systems because of its reliance on PHP5.
