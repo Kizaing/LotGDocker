@@ -22,12 +22,17 @@ The repo itself is the Dockerfiles, on the releases page you'll find a zip that'
 docker-compose up -d
 ````
 6. By default the port is 4040 so once it's done you should be able to just go to http://localhost:4040 to access the login
-7. Login with
+7. Go through the LotGD installation. When it gets to the database info section enter the following
 ````
-Username: admin
-Password: lotgdadmin
+Mysql Address: lotgd-db
+Mysql Username: root
+Mysql Password: lotgd
+Mysql Database: lotgd
 ````
-8. Change username/password or any other game settings you want, and that's it! You have a fully working vanilla Green Dragon server
+
+8. When you click test the connection information it will inform you that the database does not exist, simply click the button to create the database and it will make it for you
+9. Create the admin account for yourself and you'll be able to login!
+10. (Optional) Follow the instructions included to fix the Drinks and Riddles modules
 
 ### Notes
 
