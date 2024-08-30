@@ -22,6 +22,8 @@ services:
      volumes:
        - ./lotgd:/var/www/lotgd
   lotgd-db:
-     image: kizaing/lotgd-db
+     image: mariadb:10.3
      environment:
        - MYSQL_ROOT_PASSWORD=lotgd
+     volumes:
+       - ./sql:/docker-entrypoint-initdb.d
